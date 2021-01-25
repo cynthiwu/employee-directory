@@ -5,7 +5,7 @@ function Filter(props) {
     return (
         <form>
             <div>
-                <input name="filter" type = "text" placeholder= "Filter by Name" id="filter" />
+                <input name="filter" value={props.filter} type = "text" id="filter" onChange={props.handleInputChange}/>
             </div>
         </form>
     );

@@ -6,22 +6,36 @@ import API from "../utils/API";
 
 class DirectoryContainer extends Component {
     state = {
-        result: {},
+        result: [],
         filter: ""
     };
 
-    randomUser = () => {
-        API.search().then(res => 
-            this.setState({ result: res.data })).catch(err => console.log(err));
+    componentDidMount() {
+        this.randomUser();
+    };
 
+    randomUser = () => {
+        API.search().then(res => {
+            console.log(res);
+            this.setState({ result: res.data.results })
+        }).catch(err => console.log(err));
+        
+    };
+
+    handleInputChange = event => {
+        const name = event.target.name;
+        const value = event.target.value;
+        this.setState({
+            [name]: value
+        });
     };
 
     render() {
         return (
             <React.Fragment>
                 <Title>Employee  Directory</Title>
-                <Filter />
-                <Table />
+                <Filter filter={this.state.filter} handleInputChange={this.handleInputChange}/>
+                <Table users={this.state.result} filter={this.state.filter}/>
             </React.Fragment>
         );
     }
