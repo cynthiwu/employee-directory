@@ -2,7 +2,10 @@ import React from "react";
 import "./style.css";
 
 function Title(props) {
-  return <h1 className="title">{props.children}</h1>;
+  return <nav class="navbar navbar-light">
+  <a class="m-auto navbar-brand">{props.children}</a>
+  </nav>
+
 }
 
 export default Title;
