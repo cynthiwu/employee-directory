@@ -7,7 +7,8 @@ import API from "../utils/API";
 class DirectoryContainer extends Component {
     state = {
         result: [],
-        filter: ""
+        filter: "",
+        sort: false
     };
 
     componentDidMount() {
@@ -30,12 +31,40 @@ class DirectoryContainer extends Component {
         });
     };
 
+    sortByName = () => {
+
+        if (this.state.sort === false) {
+    
+            let newResult = this.state.result.sort((a, b) => {
+                const lowerA = a.name.first.toLowerCase();
+                const lowerB = b.name.first.toLowerCase();
+                return (lowerA < lowerB) ? -1 : (lowerA > lowerB) ? 1 : 0;
+             });
+
+             this.setState({
+                result: newResult, sort: true
+            });
+
+        } else if (this.state.sort === true) {
+
+            let newResult = this.state.result.sort((a, b) => {
+                const lowerA = a.name.first.toLowerCase();
+                const lowerB = b.name.first.toLowerCase();
+                return (lowerA > lowerB) ? -1 : (lowerA < lowerB) ? 1 : 0;
+             });
+
+             this.setState({
+                result: newResult, sort: false
+            });
+        };
+    };
+
     render() {
         return (
             <React.Fragment>
                 <Title>Employee  Directory</Title>
                 <Filter filter={this.state.filter} handleInputChange={this.handleInputChange}/>
-                <Table users={this.state.result} filter={this.state.filter}/>
+                <Table users={this.state.result} filter={this.state.filter} sort={this.sortByName}/>
             </React.Fragment>
         );
     }

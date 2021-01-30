@@ -2,8 +2,8 @@ import React from "react";
 import "./style.css";
 
 function Title(props) {
-  return <nav class="navbar navbar-light">
-  <a class="m-auto navbar-brand">{props.children}</a>
+  return <nav className="navbar navbar-light">
+  <a className="m-auto navbar-brand">{props.children}</a>
   </nav>
 
 }

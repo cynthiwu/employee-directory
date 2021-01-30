@@ -3,7 +3,7 @@ import "./style.css";
 
 function Filter(props) {
     return (
-        <form class="form">
+        <form className="form">
             <div>
                 <p>Use to </p>
                 <input name="filter" value={props.filter} type = "text" id="filter" placeholder="Filter your search" onChange={props.handleInputChange}/>

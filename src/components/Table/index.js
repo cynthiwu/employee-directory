@@ -8,7 +8,7 @@ function Table(props) {
             <thead>
                 <tr>
                     <th scope="col">Image</th>
-                    <th scope="col">Name</th>
+                    <th onClick={props.sort} scope="col">Name</th>
                     <th scope="col">Phone</th>
                     <th scope="col">Email</th>
                     <th scope="col">DOB</th>
@@ -16,12 +16,12 @@ function Table(props) {
             </thead>
             <tbody>
                 {props.users?.length && props.users.filter(user => (user.name.first + " " + user.name.last).toLowerCase().includes(props.filter)).map(item => 
-                    <tr>
+                    <tr key={item.index}>
                         <img src={item.picture.thumbnail}/>
                         <td>{item.name.first} {item.name.last}</td>
                         <td>{item.phone}</td>
                         <td>{item.email}</td>
-                        <td>{new Date(item.dob.date).toDateString()}</td>
+                        <td>{new Date(item.dob.date).toLocaleDateString()}</td>
                     </tr>
                 )}
             </tbody>
@@ -33,4 +33,3 @@ function Table(props) {
 export default Table;
 
 
-//Adding a sort --> arr.sort((a,b) => a.age - b.age)
