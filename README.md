@@ -1,55 +1,77 @@
-# Unit 19 React Homework: Employee Directory
+# React Employee Directory
 
-## Overview
+Explore the [project page](https://github.com/cynthiwu/employee-directory)
 
-For this assignment, you'll create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
+View it live on [GitHub Pages](https://cynthiwu.github.io/employee-directory/)
 
-## User Story
+## Table of Contents
+- [About The Project](#about-the-project)
+    - [Built With](#built-with)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Demo](#demo)
+- [Contributing](#contributing)
+- [Contact](#contact)
 
-* As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
 
-## Business Context
+## About The Project
 
-An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+The goal of this project was to build a simple Employee Directory application using React. The focus was on breaking up the application's UI into components and practice managing component state and responding to user events.  
 
-## Acceptance Criteria
+<hr>
 
-Given a table of random users generated from the [Random User API](https://randomuser.me/), when the user loads the page, a table of employees should render. 
+![Main Snapshot](./public/images/directory.png)
 
-The user should be able to:
+<hr>
 
-  * Sort the table by at least one category
+### Built With
 
-  * Filter the users by at least one property.
+This project was built using:
 
-## Commit Early and Often
+* JavaScript
+* [React](https://reactjs.org/)
+* [Node.js](https://nodejs.org/api/fs.html)
+* [Axios](https://www.npmjs.com/package/axios)
+* [Random User API](https://randomuser.me/)
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+## Installation
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
+While not necessary to run the program via the live link above, you may get a local copy up and running by following these simple steps:
 
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
+1. Clone the repo
+```sh
+git clone git@github.com:cynthiwu/employee-directory.git 
+```
 
-Follow these guidelines for committing:
+2. Install NPM packages (i.e., Inquirer)
+```sh
+npm install
+```
 
-* Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
+## Usage
 
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
+This project can be used as a demonstration of React components and a framework for manipulating UI based on user action. In addition, it is a good example of the Random User API and how the data can be used. Randomly generated data can be swapped out for user entered data. 
 
-* Don't commit half done work, for the sake of your collaborators (and your future self!)
+### Demo
 
-* Test your application before you commit to ensure functionality at every step in the development process
+Watch the video below to see how the program works.
 
-* We would like you to have well over 200 commits by graduation, so commit early and often!
+![Directory Demo](./public/images/directory.gif)
 
-* Deploy this site to GitHub Pages using the [Create React App docs for deployment.](https://create-react-app.dev/docs/deployment/#github-pages)
+## Contributing
 
-* **Important**: Be sure to push your codebase to GitHub and **NOT** your built and deployed code. Ensure this happens by following the above instructions and using the `gh-pages` branch to host the deployed application's code.
+Contributions are what make the open source community such an amazing place to  learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-## Submission on BCS
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-You are required to submit the following:
+## Contact
 
-* the URL to the deployed application
+Cynthia Wu - [@cynthia21wu](https://twitter.com/cynthia21wu) - cynthia21wu@gmail.com
 
-* the URL to the Github repository
+Project Link: [https://github.com/cynthiwu/employee-directory](https://github.com/cynthiwu/employee-directory)
+
+Live Link: [https://cynthiwu.github.io/employee-directory/](https://cynthiwu.github.io/employee-directory/)
