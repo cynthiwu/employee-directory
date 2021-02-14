@@ -72,6 +72,6 @@ Contributions are what make the open source community such an amazing place to  
 
 Cynthia Wu - [@cynthia21wu](https://twitter.com/cynthia21wu) - cynthia21wu@gmail.com
 
-Project Link: [https://github.com/cynthiwu/employee-directory](https://github.com/cynthiwu/employee-directory)
+Project Link: [https://github.com/cynthiwu/google-books-search](https://github.com/cynthiwu/google-books-search)
 
-Live Link: [https://cynthiwu.github.io/employee-directory/](https://cynthiwu.github.io/employee-directory/)
+Live Link: []()
